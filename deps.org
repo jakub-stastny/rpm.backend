@@ -5,6 +5,6 @@
 
 #+BEGIN_SRC clojure :tangle deps.edn
   {:paths ["src"]
-  :deps {org.clojure/clojure {:mvn/version "1.10.3"}
-          com.github.seancorfield/next.jdbc {:mvn/version "1.1.646"}}}
+   :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+         com.github.seancorfield/next.jdbc {:mvn/version "1.1.646"}}}
 #+END_SRC

@@ -2,6 +2,25 @@
 #+AUTHOR: Jakub Šťastný
 
 * Main
+** Design decisions
+*** Separation of pure and impure functions
+
+In a normal web app (such as this one), a lot of the functionality inherently deals with the database and is impure by definition. Still let's try to use pure functions as much as possible.
+
+*** Testing
+**** Unit testing
+**** Integration testing
+
+Hit the endpoint directly. Maybe worth doing from Ruby/rSpec?
+
+*** Data format for back-end/front-end communication
+**** TODO: Decide between JSON and EDN
+
+I might go with EDN here.
+
+*** Logging
+
+Let's log to =STDOUT=, as recommended by the [[https://12factor.net][12-factor app methodology]]. It will run in Docker anyway.
 
 #+BEGIN_SRC clojure :tangle main.clj
   (ns rpm.main)
