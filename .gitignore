@@ -1,4 +1,5 @@
 *#*
 src/**/*.clj
+test/**/*.clj
 /.cpcache
 /deps.edn
