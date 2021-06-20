@@ -1,2 +1,2 @@
 *#*
-src/*.clj
+src/**/*.clj

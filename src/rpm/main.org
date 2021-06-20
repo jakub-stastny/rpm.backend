@@ -1,3 +1,9 @@
-#+BEGIN_SRC clojure
-(ns rpm.main)
+#+TITLE: Rental property management
+#+AUTHOR: Jakub Šťastný
+
+* Main
+
+#+BEGIN_SRC clojure :tangle main.clj
+  (ns rpm.main)
+
 #+END_SRC
