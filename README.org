@@ -50,3 +50,7 @@ Bank connection, email etc.
 Routes =GET /account= and =PATCH /account=.
 
 Let's use =PATCH= rather than =PUT=, because we want to save each field once a field's focus is lost, rather than to have to use a save button.
+
+* Next steps
+
+Read about the [[./src/main.org][design decisions]].
