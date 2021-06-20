@@ -12,7 +12,7 @@ rename-first-tab
 # We compile on save, but for the first-time compilation,
 # we want to be able to do it from the shell, rather than
 # having to go and save manually each file from Emacs.
-compile() {
+tangle() {
   cd src
   echo "(dolist (file argv) (message file) (find-file file) (org-babel-tangle))" > compile.el
   emacs --script compile.el *.org
