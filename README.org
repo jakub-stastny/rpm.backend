@@ -53,4 +53,5 @@ Let's use =PATCH= rather than =PUT=, because we want to save each field once a f
 
 * Next steps
 
-Read the [[./src/main.org][design decisions]] chapter.
+- Read the [[./src/main.org][design decisions]] chapter.
+- If you're new to Clojure and you're using Emacs, you might like [[./env/README.org][writing Clojure programs in Emacs]] chapter.
