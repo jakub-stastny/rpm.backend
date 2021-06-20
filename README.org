@@ -53,4 +53,4 @@ Let's use =PATCH= rather than =PUT=, because we want to save each field once a f
 
 * Next steps
 
-Read about the [[./src/main.org][design decisions]].
+Read the [[./src/main.org][design decisions]] chapter.

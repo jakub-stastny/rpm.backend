@@ -31,4 +31,5 @@ Let's log to =STDOUT=, as recommended by the [[https://12factor.net][12-factor a
 
 * Next steps
 
-- Read about the [[./db.org][database configuration]].
+- Read the [[../deps.org][dependencies]] chapter.
+- Read the [[./db.org][database configuration]] chapter.
