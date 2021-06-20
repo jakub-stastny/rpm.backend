@@ -1,0 +1,3 @@
+#+BEGIN_SRC clojure
+(ns rpm.main)
+#+END_SRC
