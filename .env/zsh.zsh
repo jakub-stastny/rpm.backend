@@ -20,4 +20,8 @@ tangle() {
   cd -
 }
 
+run() {
+  clj -M -m rpm.main
+}
+
 report-custom-functions
