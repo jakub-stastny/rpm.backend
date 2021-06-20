@@ -1,0 +1,44 @@
+name: Elm tests
+
+# Controls when the action will run.
+on:
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Run in $GITHUB_WORKSPACE
+        run: cd $GITHUB_WORKSPACE
+
+      - name: Install dependencies
+        run: |
+          # Install Node.js & Emacs
+          sudo apt-get install -y nodejs emacs-nox
+
+          # Install Elm
+          curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
+          gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin/
+
+          # Install elm-test
+          sudo npm install -g elm-test
+
+      - name: Tangle Elm files
+        run: |
+          cd src
+          echo "(dolist (file argv) (message file) (find-file file) (org-babel-tangle))" > compile.el
+          emacs --script compile.el *.org
+          cd -
+
+      - name: Run Elm-test
+        run: elm-test src/*Test.elm
