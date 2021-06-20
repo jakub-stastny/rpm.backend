@@ -4,22 +4,29 @@ Rental property management system (REST API).
 
 * Requirements
 ** Customer journey
-*** As a customer, I want to see the list of all my properties.
+*** Properties
+**** As a customer, I want to see the list of all my properties.
 
 Route =GET /properties=.
 
-*** As a customer, I want to see details of each of my properties.
+**** As a customer, I want to see details of each of my properties.
 
-Route =GET /properties/:id=.
+Route =GET /properties/:slug=.
 
-*** As a customer, I want to be able to review all my income payments in one place.
+*** Receipts
+**** As a customer, I want to be able to review all my income payments in one place.
 
 Route =GET /receipts=.
 
-*** As a customer, I want to be able to see all the incidents in one place.
+**** As a customer, I want to be able to see all my income of a property in one place.
+
+Route =GET /property/:slug/receipts=.
+
+*** Incidents
+**** As a customer, I want to be able to see all the incidents in one place.
 
 Route =GET /incidents=.
 
-*** As a customer, I want to be able to see all the incidents of a property in one place.
+**** As a customer, I want to be able to see all the incidents of a property in one place.
 
 Route =GET /property/:slug/incidents=.
