@@ -1,4 +1,4 @@
-name: Elm tests
+name: Clojure tests
 
 # Controls when the action will run.
 on:
@@ -21,24 +21,26 @@ jobs:
       - name: Run in $GITHUB_WORKSPACE
         run: cd $GITHUB_WORKSPACE
 
-      - name: Install dependencies
-        run: |
-          # Install Node.js & Emacs
-          sudo apt-get install -y nodejs emacs-nox
+      - name: Prepare java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
 
-          # Install Elm
-          curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
-          gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin/
+      - name: Install Clojure CLI
+        uses: DeLaGuardo/setup-clojure@3.4
+        with:
+          cli: 1.10.1.693
 
-          # Install elm-test
-          sudo npm install -g elm-test
+      - name: Install Emacs
+        run: sudo apt-get install -y emacs-nox
 
-      - name: Tangle Elm files
+      # TODO: Use something better suited for this than Emacs.
+      - name: Tangle source files
         run: |
           cd src
           echo "(dolist (file argv) (message file) (find-file file) (org-babel-tangle))" > compile.el
           emacs --script compile.el *.org
           cd -
 
-      - name: Run Elm-test
-        run: elm-test src/*Test.elm
+      - name: Run Clojure tests
+        run: clj -X:test

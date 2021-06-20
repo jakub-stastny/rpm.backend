@@ -1,6 +1,27 @@
 #+TITLE: Rental property management
 #+AUTHOR: Jakub Šťastný
 
+* Imports
+
+#+BEGIN_SRC clojure :tangle ../test/rpm/main_test.clj :mkdirp yes
+  (ns rpm.main-test
+    (:require [clojure.spec.alpha :as s]
+              [clojure.test :refer [deftest is]]
+              [expectations.clojure.test
+              :refer [defexpect expect expecting
+                      approximately between between' functionally
+                      side-effects]]))
+#+END_SRC
+
+* Tests
+
+Just an example for now.
+
+#+BEGIN_SRC clojure :tangle ../test/rpm/main_test.clj :mkdirp yes
+  (defexpect equality
+    (expect 1 (* 1 1))
+    (expect "foo" (str "f" "oo")))
+#+END_SRC
 * Main
 ** Design decisions
 *** Separation of pure and impure functions
@@ -22,7 +43,7 @@ I might go with EDN here.
 
 Let's log to =STDOUT=, as recommended by the [[https://12factor.net][12-factor app methodology]]. It will run in Docker anyway.
 
-#+BEGIN_SRC clojure :tangle main.clj
+#+BEGIN_SRC clojure :tangle rpm/main.clj :mkdirp yes
   (ns rpm.main)
 
   (defn -main [& args]
