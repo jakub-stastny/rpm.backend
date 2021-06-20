@@ -6,4 +6,6 @@
 #+BEGIN_SRC clojure :tangle main.clj
   (ns rpm.main)
 
+  (defn -main [& args]
+    (println "Here"))
 #+END_SRC
