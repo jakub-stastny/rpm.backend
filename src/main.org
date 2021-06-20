@@ -1,30 +1,34 @@
-#+TITLE: Rental property management
+#+TITLE: Rental property management: main module
 #+AUTHOR: Jakub Šťastný
 
-* Main
-** Design decisions
-*** Separation of pure and impure functions
+* Design decisions
+** Separation of pure and impure functions
 
 In a normal web app (such as this one), a lot of the functionality inherently deals with the database and is impure by definition. Still let's try to use pure functions as much as possible.
 
-*** Testing
-**** Unit testing
-**** Integration testing
+** Testing
+*** Unit testing
+*** Integration testing
 
 Hit the endpoint directly. Maybe worth doing from Ruby/rSpec?
 
-*** Data format for back-end/front-end communication
-**** TODO: Decide between JSON and EDN
+** Data format for back-end/front-end communication
+*** TODO Decide between JSON and EDN
 
-I might go with EDN here.
+I might go with EDN here. Let's see whether I'll decide to go with Clojurescript or Elm. Clojurescript will be prefered if there will be any sharing of code between the back-end and the front-end.
 
-*** Logging
+** Logging
 
 Let's log to =STDOUT=, as recommended by the [[https://12factor.net][12-factor app methodology]]. It will run in Docker anyway.
 
+* Main
 #+BEGIN_SRC clojure :tangle rpm/main.clj :mkdirp yes
   (ns rpm.main)
 
   (defn -main [& args]
     (println "Here"))
 #+END_SRC
+
+* Next steps
+
+- Read about the [[./db.org][database configuration]].
