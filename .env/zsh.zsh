@@ -24,4 +24,8 @@ run() {
   clj -M -m rpm.main
 }
 
+t() {
+  clj -X:test
+}
+
 report-custom-functions
