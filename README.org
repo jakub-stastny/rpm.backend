@@ -7,4 +7,4 @@ This is the REST API for the [[https://github.com/jakub-stastny/rpm.meta][rental
 * Next steps
 
 - Read the [[./src/main.org][design decisions]] chapter.
-- If you're new to Clojure and you're using Emacs, you might like [[./env/README.org][writing Clojure programs in Emacs]] chapter.
+- If you're new to Clojure and you're using Emacs, you might like [[./.env/README.org][writing Clojure programs in Emacs]] chapter.
