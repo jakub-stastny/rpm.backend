@@ -37,9 +37,6 @@ jobs:
       # TODO: Use something better suited for this than Emacs.
       - name: Tangle source files
         run: |
-          echo "(dolist (file argv) (message file) (find-file file) (org-babel-tangle))" > compile.el
-          emacs --script compile.el deps.org
-
           cd src
           echo "(dolist (file argv) (message file) (find-file file) (org-babel-tangle))" > compile.el
           emacs --script compile.el *.org
