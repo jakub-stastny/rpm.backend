@@ -4,7 +4,7 @@
 # Unfortunately GitHub doesn't know how to display it correctly.
 #
 # Try with [[https://orgmode.org/guide/Hyperlinks.html][with ID]].
-Literate DevOps script to set up the current project. After the setup, there's a [[#writing-clojure-apps][guide to writing Clojure apps in Emacs]].
+Literate DevOps script to set up the current project. After the setup, there's a [[#writing-clojure-apps-in-emacs][guide to writing Clojure apps in Emacs]].
 
 * Installation
 
@@ -79,7 +79,7 @@ We want to keep environment-specific configuration out of our =~/.emacs=.
 
 * Writing Clojure apps in Emacs
 :PROPERTIES:
-:CUSTOM_ID: writing-clojure-apps
+:CUSTOM_ID: writing-clojure-apps-in-emacs
 :END:
 
 ** Structural editing
