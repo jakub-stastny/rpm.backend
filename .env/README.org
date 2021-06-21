@@ -1,5 +1,7 @@
 * About
 
+# The link below is a perfectly valid Orgmode link, followable with C-c C-o.
+# Unfortunately GitHub doesn't know how to display it correctly.
 Literate DevOps script to set up the current project. After the setup, there's a [[Writing Clojure apps in Emacs][guide to writing Clojure apps in Emacs]].
 
 * Installation
@@ -75,5 +77,7 @@ We want to keep environment-specific configuration out of our =~/.emacs=.
 
 * Writing Clojure apps in Emacs
 ** Structural editing
+*** TODO Describe
 
 ** REPL-driven development
+*** TODO Describe
