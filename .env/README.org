@@ -1,6 +1,6 @@
 * About
 
-Literate DevOps script to set up the current project.
+Literate DevOps script to set up the current project. After the setup, there's a [Writing Clojure apps in Emacs][guide to writing Clojure apps in Emacs].
 
 * Installation
 
@@ -73,3 +73,8 @@ We want to keep environment-specific configuration out of our =~/.emacs=.
 - Dotfiles: [[https://github.com/jakub-stastny/dotfiles/blob/master/.zsh/environments/helpers.zsh][~/zsh/environments/helpers.zsh]]
 - Dotfiles: [[https://github.com/jakub-stastny/dotfiles/blob/master/.zsh/environments/basic.zsh][~/zsh/environments/basic.zsh]]
 - Dotfiles: [[https://github.com/jakub-stastny/dotfiles/blob/master/.zsh/environments/emacs.zsh][~/zsh/environments/emacs.zsh]]
+
+* Writing Clojure apps in Emacs
+** Structural editing
+
+** REPL-driven development
