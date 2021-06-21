@@ -1,6 +1,6 @@
 * About
 
-Literate DevOps script to set up the current project. After the setup, there's a [Writing Clojure apps in Emacs][guide to writing Clojure apps in Emacs].
+Literate DevOps script to set up the current project. After the setup, there's a [[Writing Clojure apps in Emacs][guide to writing Clojure apps in Emacs]].
 
 * Installation
 
