@@ -1,3 +1,13 @@
+#+BEGIN_SRC gitignore :tangle .gitignore
+.editorconfig
+*#*
+src/**/*.clj
+test/**/*.clj
+/.cpcache
+/deps.edn
+#+END_SRC
+
+#+BEGIN_SRC editorconfig :tangle .editorconfig
 # https://EditorConfig.org
 
 root = true
@@ -10,3 +20,4 @@ charset = utf-8
 indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
+#+END_SRC

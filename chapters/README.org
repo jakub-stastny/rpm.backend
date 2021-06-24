@@ -1,0 +1,2 @@
+- Read the [[./src/main.org][design decisions]] chapter.
+- If you're new to Clojure and you're using Emacs, you might like [[./.env/README.org][writing Clojure programs in Emacs]] chapter.
