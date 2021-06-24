@@ -82,4 +82,15 @@ We want to keep environment-specific configuration out of our =~/.emacs=.
 *** TODO Describe
 
 ** REPL-driven development
-*** TODO Describe
+
+Clojure adheres to a long tradition in Lisp of interactive development. Rather than switching between the editor an a terminal, to code and /then/ run the code, in Clojure it's more common to have a REPL server running and send code to it from the editor. Unlike in other environments, we don't typically write to the REPL and we don't restart it to "reset the environment". We just keep sending new code to the REPL, which overrides the old code.
+
+*** Creating examples with the =comment= function
+
+The =comment= function is used to included code that is only run by the developer directly. Unlike actual comments, these expressions can be evaluated by the REPL and can serve as examples of how the API is being used.
+
+These expressions can also serve as admin glue code: creating the database, running migrations and so on.
+
+More on [[https://practical.li/clojure/repl-driven-devlopment.html][using the comment function]].
+
+Literate programming already addresses all these needs though.
